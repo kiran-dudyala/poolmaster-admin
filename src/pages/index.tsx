@@ -1,7 +1,7 @@
 import { Sidebar } from "../components/Sidebar";
 import { Navbar } from "../components/Navbar";
+import { SimpleCard } from "../components/common/card/SimpleCard";
 import React, { useState, useEffect } from "react";
-
 
 export default function Home() {
   const [collpased, setCollpased] = useState(false);
@@ -13,7 +13,12 @@ export default function Home() {
   return (
     <>
       <div className="wrapper">
-        <nav id="sidebar" className= { collpased? "sidebar js-sidebar":"sidebar js-sidebar collapsed"}>
+        <nav
+          id="sidebar"
+          className={
+            collpased ? "sidebar js-sidebar" : "sidebar js-sidebar collapsed"
+          }
+        >
           <div className="sidebar-content js-simplebar">
             <a className="sidebar-brand" href="index.html">
               <span className="align-middle">PoolMaster</span>
@@ -36,7 +41,7 @@ export default function Home() {
                   <div className="w-100">
                     <div className="row">
                       <div className="col-sm-6">
-                          <div className="card" style={{borderRadius:20}}>
+                        <div className="card" style={{ borderRadius: 20 }}>
                           <div className="card-body">
                             <div className="row">
                               <div className="col mt-0">
@@ -65,7 +70,7 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
-                          <div className="card" style={{borderRadius:20}}>
+                        <div className="card" style={{ borderRadius: 20 }}>
                           <div className="card-body">
                             <div className="row">
                               <div className="col mt-0">
@@ -96,64 +101,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="col-sm-6">
-                          <div className="card" style={{borderRadius:20}}>
-                          <div className="card-body">
-                            <div className="row">
-                              <div className="col mt-0">
-                                <h5 className="card-title">Earnings</h5>
-                              </div>
-
-                              <div className="col-auto">
-                                <div className="stat text-primary">
-                                  <i
-                                    className="align-middle"
-                                    data-feather="dollar-sign"
-                                  ></i>
-                                </div>
-                              </div>
-                            </div>
-                            <h1 className="mt-1 mb-3">$21.300</h1>
-                            <div className="mb-0">
-                              <span className="text-success">
-                                {" "}
-                                <i className="mdi mdi-arrow-bottom-right"></i>{" "}
-                                6.65%{" "}
-                              </span>
-                              <span className="text-muted">
-                                Since last week
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                          <div className="card" style={{borderRadius:20}}>
-                          <div className="card-body">
-                            <div className="row">
-                              <div className="col mt-0">
-                                <h5 className="card-title">Orders</h5>
-                              </div>
-
-                              <div className="col-auto">
-                                <div className="stat text-primary">
-                                  <i
-                                    className="align-middle"
-                                    data-feather="shopping-cart"
-                                  ></i>
-                                </div>
-                              </div>
-                            </div>
-                            <h1 className="mt-1 mb-3">64</h1>
-                            <div className="mb-0">
-                              <span className="text-danger">
-                                {" "}
-                                <i className="mdi mdi-arrow-bottom-right"></i>{" "}
-                                -2.25%{" "}
-                              </span>
-                              <span className="text-muted">
-                                Since last week
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                        <SimpleCard />
                       </div>
                     </div>
                   </div>
